@@ -2,7 +2,6 @@
 import Tile from '../Tile/Tile';
 import './Results.scss';
 
-
 // @ts-ignore
 export default function Results({ filteredItems }) {
     return (

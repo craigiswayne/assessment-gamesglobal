@@ -5,6 +5,8 @@ import FilterOption from '../FilterOption/FilterOptions';
 // @ts-ignore
 export default function FilterBar({ resultsFetched }) {
 
+    let _cachedResults: [];
+
     const filterBySiteOptions = [
         {
             value: 'product-hunt',
@@ -35,11 +37,15 @@ export default function FilterBar({ resultsFetched }) {
         }
     ];
 
-    const fetchResults = async () => {
+    const fetchResults = async (useCache = true) => {
+        if(useCache && _cachedResults !== undefined){
+            resultsFetched(_cachedResults);
+        }
         try {
             const response = await fetch('/data/Assessment.json');
-            const result = await response.json();
-            resultsFetched(result);
+            const jsonResponse = await response.json();
+            _cachedResults = jsonResponse.data.oneClickAutomations.items;
+            resultsFetched(_cachedResults);
         } catch (error: any) {
             // Skipping better error checking for the assessment purpose
             alert('Error fetch data...')
