@@ -1,0 +1,9 @@
+#filter-bar {
+    display: flex;
+    flex-direction: column;
+}
+
+.show-all {
+    align-self: end;
+    color: var(--color-primary);
+}
