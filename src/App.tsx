@@ -6,8 +6,6 @@ import Results from './components/Results/Results';
 function App() {
 
     const [filteredItems, setFilteredItems] = useState(null);
-
-    // @ts-ignore
     const resultsFetched = (data) => {
         setFilteredItems(data);
     };
@@ -15,10 +13,10 @@ function App() {
 
     return (
       <>
-          <header>
+          <header className='container'>
               <FilterBar resultsFetched={resultsFetched} />
           </header>
-          <main>
+          <main className='container'>
               <Results filteredItems={filteredItems}/>
           </main>
       </>

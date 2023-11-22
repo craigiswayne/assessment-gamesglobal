@@ -4,6 +4,7 @@
   --color: #868686;
   --color-dark: #404040;
   --color-primary: #a157e5;
+  --max-width: 1024px;
 }
 
 * {
@@ -19,7 +20,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-main {
-  max-width: 1024px;
+.container {
+  max-width: var(--max-width);
   margin: auto;
 }
