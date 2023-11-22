@@ -1,9 +1,54 @@
+:root {
+    --chip-active: #ac74dd;
+    --chip-active-light: #fcf5ff;
+}
 #filter-bar {
     display: flex;
     flex-direction: column;
 }
 
-.show-all {
-    align-self: end;
-    color: var(--color-primary);
+.top {
+    display: flex;
+    justify-content: space-between;
+    color: var(--color)
+}
+
+.MuiChip-clickable.selected {
+    border-color: var(--chip-active);
+    background-color: var(--chip-active-light);
+    color: var(--chip-active);
+    border-width: 2px;
+    font-weight: bold;
+
+    svg {
+        stroke: var(--chip-active);
+        fill: var(--chip-active);
+    }
+}
+
+.dropdown-chip-container {
+    position: relative;
+
+    .MuiFormControl-root {
+        position: absolute;
+        left: 0;
+        top: -15px;
+        visibility: hidden;
+    }
+}
+
+.MuiListItem-root {
+    padding: 0 !important;
+    width: auto !important;
+
+    .MuiChip-root {
+        background-color: var(--chip-active-light);
+        color: var(--chip-active);
+        border: 1px solid var(--chip-active);
+
+        svg {
+            stroke: var(--chip-active);
+            fill: var(--chip-active)
+        }
+    }
 }

@@ -1,5 +1,5 @@
 import './Tile.scss';
-// @ts-ignore
+
 export default function Tile({ data }) {
     return (
         <div className='tile'>
