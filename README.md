@@ -2,15 +2,6 @@
 
 https://assessment-gamesglobal.web.app/
 
+[requirements](wiki/Front_End_Assessment_1.pdf)
+
 ![screenshot](wiki/screenshot.png)
-
-## Getting Started
-```shell
-npm run start
-```
-
-
-#### Components
-* Filter Bar
-* Filter
-* Tile
